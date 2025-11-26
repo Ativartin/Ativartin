@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ativartin – Digital Ecosystem & Social Platforms</title>
+  <meta name="description" content="Ativartin Platforms builds visionary digital ecosystems and social platforms that inspire communities, communication, and innovation.">
+  <meta name="keywords" content="Ativartin, digital platforms, social platforms, community apps, tech solutions, Nrada, Lutantu, Counsit">
+  <meta name="author" content="Ativartin Platforms">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="alogo.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ativartin.com/">
+  <meta property="og:title" content="Ativartin | Digital Ecosystem & Social Platforms">
+  <meta property="og:description" content="Ativartin Platforms builds visionary digital ecosystems and social platforms that inspire communities, communication, and innovation.">
+  <meta property="og:image" content="https://www.ativartin.com/logo.png">
+
+
+    <style>
+    :root {
+      --primary: #0081fb;
+      --dark: #0f172a;
+      --light: #fefefe;
+      --muted: #a3a5a7;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;-webkit-user-select: 
+        none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* Internet Explorer/Edge */  
+        user-select: none;         /* Standard property */}
+    body { background: var(--light); color: var(--dark); scroll-behavior:smooth; }
+
+    /* Header */
+    header {
+      position: fixed; top:0; width:100%; background:white; border-bottom:1px solid #e5e7eb; z-index:100;
+    }
+    .nav-container { max-width:1000px; margin:auto; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { display:flex; align-items:center; gap:5px; font-size:22px; font-weight:bold; color:var(--dark); cursor:pointer; }
+    .logo img { width:50px; height:auto; }
+    nav { display:flex; gap:40px; }
+    nav a { text-decoration:none; color:var(--dark); font-size:15px; }
+    nav a.active, nav a:hover { color:var(--primary); font-weight:bold; }
+    .menu-toggle { display:none; cursor:pointer; font-size:30px; }
+
+    @media(max-width:768px){
+      nav { flex-direction:column; background:white; position:absolute; top:60px; right:20px; width:100px; border:1px solid #e5e7eb; border-radius:8px; padding:10px; display:none; }
+      nav a { margin:0px ;  }
+      .menu-toggle { display:block; }
+    }
+
+    /* Hero */
+    .hero { padding:140px 20px 80px; text-align:center; background: linear-gradient(180deg,#ffffff,#f0f5ff); }
+    .hero h1 { font-size:42px; margin-bottom:15px; }
+    .hero p { font-size:18px; color:var(--muted); max-width:700px; margin:auto; }
+    .btn { margin-top:30px; background:var(--primary); color:white; border:none; padding:14px 26px; border-radius:30px; cursor:pointer; font-size:16px; transition:0.3s; text-decoration:none; display:inline-block; text-align:center; }
+    .btn:hover { background:#0060c0; transform:translateY(-2px); }
+    .btn.secondary { background:white; color:var(--primary); border:2px solid var(--primary); }
+    .btn.secondary:hover { background:var(--primary); color:white; }
+
+    /* Sections */
+    section { max-width:1100px; margin:auto; padding:80px 20px; }
+    section h2 { text-align:center; margin-bottom:20px; font-size:28px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; margin-top:30px; }
+    .card { background:white; padding:25px; border-radius:16px; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
+
+    /* Contact */
+    .contact-container { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:1000px; margin:auto; margin-top:30px; }
+    .contact-info p { font-size:16px; color:var(--muted); margin-bottom:10px; }
+    .contact-form { display:flex; flex-direction:column; gap:15px; }
+    .contact-form input, .contact-form textarea { padding:12px; border-radius:8px; border:1px solid #ccc; font-size:15px; }
+    @media(max-width:768px){ .contact-container { grid-template-columns:1fr; gap:20px; } }
+
+    /* Footer */
+    footer { background:var(--dark); color:white; padding:50px 20px; }
+    footer p { color:#cbd5e1; margin-top:5px; }
+    footer h2, footer h4 { color:white; margin-bottom:10px; }
+    footer a { color:#cbd5e1; text-decoration:none; }
+    footer a:hover { color: var(--primary); }
+    .social { margin:0 10px; color:#cbd5e1; font-size:25px; transition:0.3s; }
+    .social:hover { color:var(--primary); transform:translateY(-2px); }
+    .footer-grid { max-width:1000px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:40px; text-align:center; }
+    @media(min-width:769px){ .footer-grid { text-align:left; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="alogo.png" alt="Logo">
+      <span>Ativartin</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero" id="home">
+  <h1>Empowering the Future of Digital Connection</h1>
+  <p>Ativartin Platforms is a visionary ecosystem building social spaces that inspire community, identity, and meaningful interaction.</p>
+  <div style="margin-top:20px;">
+    <a href="#products" class="btn">Explore Platforms</a>
+    <a href="#about" class="btn secondary">Learn More</a>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Ativartin</h2>
+  <p>
+    Ativartin Platforms is a next-generation digital ecosystem focused on building meaningful
+    online experiences. We create platforms that enhance communication, empower identity,
+    and strengthen how people connect in the modern world.
+  </p>
+
+  <p style="margin-top:15px;">
+    Our vision is simple: build technology that feels human.
+    From community spaces to messaging networks, every Ativartin product is crafted with
+    clarity, speed, and user-centric design at its core.
+  </p>
+
+  <div class="grid" style="margin-top:30px;">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>To build a unified digital ecosystem where people can communicate, share, and grow without barriers.</p>
+    </div>
+
+    <div class="card">
+      <h3>Our Approach</h3>
+      <p>We focus on clean design, powerful performance, and privacy-first technologies that put users at the center.</p>
+    </div>
+
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To create future-ready platforms that inspire creativity, collaboration, and authentic digital interaction.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Services -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Consulting</h3>
+      <p>Expert guidance to build communities and digital products.</p>
+    </div>
+    <div class="card">
+      <h3>Custom Integration</h3>
+      <p>Seamless integration of our platforms into your business ecosystem.</p>
+    </div>
+    <div class="card">
+      <h3>Support</h3>
+      <p>Reliable assistance to ensure smooth and secure platform operations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <h2>Our Digital Ecosystem</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Counsit</h3>
+      <p>Connecting ideas, people, and solutions — a modern platform for meaningful discussion.</p>
+    </div>
+    <div class="card">
+      <h3>Lutantu</h3>
+      <p>A vibrant social community platform designed for sharing, expression, and identity.</p>
+    </div>
+    <div class="card">
+      <h3>Nrada</h3>
+      <p>Instant messaging, voice, and video calling — fast, secure, and human communication.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p>Have questions or want to collaborate? Reach out to us!</p>
+      <p><strong>Email: </strong><a style="text-decoration: none;color: var(--muted);" href="mailto:connect@ativartin.in">connect@ativartin.in</a> </p>
+      <p><strong>Support: </strong> <a style="text-decoration: none;color: var(--muted);" href="mailto:support@ativartin.in">support@ativartin.in</a></p>
+      <p><strong>Phone: </strong> +91 9731393927</p>
+      <p><strong>Address: </strong> Harohalli, Bangalore, Karnataka ,India - 562112</p>
+    </div>
+    <form class="contact-form" onsubmit="return sendMail(this)">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h2>Ativartin Platforms</h2>
+      <p>Building the infrastructure of tomorrow's digital world.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="#home">Home</a></p>
+      <p><a href="#about">About</a></p>
+      <p><a href="#services">Services</a></p>
+      <p><a href="#products">Products</a></p>
+      <p><a href="#contact">Contact</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email:<a style="text-decoration: none;color: var(--light);" href="mailto:connect@ativartin.in">connect@ativartin.in</a>  </p>
+      <p>Support: <a style="text-decoration: none;color: var(--light);" href="mailto:support@ativartin.in">support@ativartin.in</a> </p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <p>Privacy Policy</p>
+      <p>Terms & Conditions</p>
+      <p>Cookies Policy</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <h4>Social Connect</h4>
+    <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+    <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/ativartin" class="social"><i class="fab fa-instagram"></i></a>
+  </div>
+  <hr style="border-color:#334155; margin:30px 0;">
+  <img src="logo.png" alt="Logo" width="200" style="display:block; margin:0 auto;">
+  <p style="text-align:center; color:#cbd5e1; margin-top:10px;">© 2025 Ativartin Platforms. All rights reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("open");
+  }
+
+  // Contact form mailto
+  function sendMail(form) {
+    const name = form.name.value;
+    const email = form.email.value;
+    const subject = form.subject.value;
+    const message = form.message.value;
+    window.location.href = `mailto:connect@ativartin.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message)}`;
+    alert("Thank you! Your email client should open to send the message.");
+    form.reset();
+    return false;
+  }
+
+  // Scroll spy
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if(sectionTop <= 80) current = section.getAttribute("id");
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if(link.getAttribute("href") === "#" + current) link.classList.add("active");
+    });
+  });
+
+  // Close mobile menu on link click
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if(window.innerWidth <= 768){
+        document.getElementById("navMenu").classList.remove("open");
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Mobile menu open state */
+  nav.open { display:flex !important; }
+</style>
+
+</body>
+</html>
